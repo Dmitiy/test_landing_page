@@ -25,6 +25,4 @@
 
     window.addEventListener('scroll', stickyHeader);
 
-
-
 })()
