@@ -1,0 +1,49 @@
+@import './_vars.scss';
+
+.contacts {
+    .contacts__form {
+        text-align: center;
+        background-color: #eff7ff;
+        border-radius: 1rem;
+        padding: 3rem 6.5rem 2rem 6.5rem;
+        box-shadow: 0 0 32px 2px rgba(11, 16, 32, .45);
+
+        p {
+            font-family: $font-regular;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #5e6377;
+        }
+
+        .form-group {
+            width: 100%;
+            position: relative;
+
+            .form__input {
+                width: 100%;
+                padding: .75rem 1rem;
+                font-size: .875rem;
+                line-height: 1.3125rem;
+                border-radius: .25rem;
+                box-shadow: none;
+                border: 1px solid transparent;
+                margin-bottom: 1.5rem;
+                resize: none;
+                transition: .35s all;
+                color: #233261;
+                font-family: Montserrat, sans-serif;
+
+                &:focus {
+                    outline: 0;
+                    border-color: #acb2c9;
+                    transition: .3s all linear;
+                }
+            }
+        }
+
+
+        @import './components/elements/_input-checkbox.scss';
+
+        @import './components/elements/_button.scss';
+    }
+}

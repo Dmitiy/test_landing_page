@@ -9,8 +9,21 @@
     }
 }
 
-.row {
-    width: 100%;
+.link {
+    color: #1e8c3d !important;
+    transition: .4s all;
+
+    &:hover {
+        color: #00cf7a !important;
+    }
+
+    &:visited {
+        color: #233261 !important;
+    }
+
+    &:active {
+        color: #1e8c3d !important;
+    }
 }
 
 .circle {

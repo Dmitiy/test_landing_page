@@ -1,0 +1,10 @@
+@import './_vars.scss';
+
+.dot {
+    @extend .circle;
+    background-color: #e6e6e6;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 2rem;
+}

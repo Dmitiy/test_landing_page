@@ -1,0 +1,25 @@
+@import './_vars.scss';
+
+button {
+    &.btn {
+        display: inline-block;
+        color: #fff;
+        background-color: #00ab65;
+        border-radius: 3rem;
+        padding: .75rem 1.75rem;
+        font-size: .875rem;
+        line-height: 1.3125rem;
+        font-weight: 600;
+        cursor: pointer;
+        outline: 0;
+        box-shadow: none;
+        text-decoration: none;
+        border-style: unset;
+        transition: .35s all;
+
+        &:hover {
+            background-color: #00cf7a;
+            transition: .35s all;
+        }
+    }
+}

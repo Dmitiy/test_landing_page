@@ -1,0 +1,15 @@
+@import './_vars.scss';
+
+.myEducation {
+    text-align: center;
+
+    p {
+        font-size: 2.325rem;
+        color: #2c386d;
+        font-family: $font-regular;
+
+        +p {
+            margin-top: 3rem;
+        }
+    }
+}

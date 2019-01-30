@@ -1,0 +1,28 @@
+-
+    var userInfo = {
+        name: 'Дмитрий',
+        surname: 'Шкарлат',
+        year: '1986 год рождения',
+        location: 'г. Севастополь, Россия'
+    }
+
+section#aboutMe.hash.about
+    h2.h2 Кандидат
+    .row
+        .w-50
+            .about-img
+                img.circle(src='./assets/img/me.jpg', alt='I am')
+        .w-50
+            .about-me
+                p
+                    span.dot
+                    = userInfo.surname
+                p
+                    span.dot
+                    = userInfo.name
+                p
+                    span.dot
+                    = userInfo.year
+                p
+                    span.dot
+                    = userInfo.location

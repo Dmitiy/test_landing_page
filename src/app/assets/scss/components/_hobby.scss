@@ -1,0 +1,63 @@
+@import './_vars.scss';
+
+
+.hash {
+    padding-top: 130px;
+    width: 100%;
+    height: 100vh;
+}
+
+.hobby {
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    figure {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        img {
+            width: 21.875rem;
+            height: 21.875rem;
+        }
+
+        &:hover {
+            figcaption {
+                transition: .3s all linear;
+                cursor: pointer;
+                visibility: visible;
+                opacity: 1;
+                background-color: #414462;
+                z-index: 10;
+            }
+        }
+
+        figcaption {
+            display: flex;
+            align-items: center;
+            padding: .5rem;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            background-color: transparent;
+            color: #fff;
+            font-size: 2rem;
+            line-height: 1;
+            font-family: $font-regular;
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            transform: translateX(50%) translateY(50%);
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+}

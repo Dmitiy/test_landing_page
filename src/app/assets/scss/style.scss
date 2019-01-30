@@ -17,7 +17,6 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        box-shadow: 0 1px 13px 7px rgba(16, 81, 222, .1);
 
         @import './components/elements/_logo.scss';
 
@@ -28,7 +27,19 @@
         @import './components/_nav-menu.scss';
     }
 
+    >header,
     >footer {
+        box-shadow: 0 1px 13px 7px rgba(16, 81, 222, .1);
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    >footer {
+        padding: 10px 0;
         @import './components/_nav-menu.scss';
 
         .footer {
@@ -46,196 +57,8 @@
         }
     }
 
-    .hash {
-        padding-top: 130px;
-        width: 100%;
-        height: 100vh;
-    }
+    @import './_layout.scss';
 
-    .row {
-        display: flex;
-        align-items: center;
-    }
-
-    .about {
-        .about-img {
-            text-align: center;
-
-            img {
-                width: 60%;
-            }
-        }
-
-        .about-me {
-            p {
-                line-height: 1.725rem;
-                font-size: 1.9375rem;
-                font-weight: 400;
-                font-family: PT_Sans-Web-Regular;
-
-                +p {
-                    margin-top: 4rem;
-                }
-
-                .dot {
-                    @extend .circle;
-                    background-color: #e6e6e6;
-                    display: inline-block;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    margin-right: 2rem;
-                }
-            }
-
-            p {
-                font-size: 3.125rem;
-                text-align: justify;
-            }
-        }
-    }
-
-    .myEducation {
-        text-align: center;
-
-        p {
-            font-size: 3.125rem;
-            color: #2c386d;
-
-            +p {
-                margin-top: 3rem;
-            }
-        }
-    }
-
-    .hobby {
-        figure {
-            position: relative;
-            display: inline-block;
-            vertical-align: top;
-            width: 350px;
-            height: 350px;
-
-            &:hover {
-
-                figcaption {
-                    padding: .5rem;
-                    display: flex;
-                    visibility: visible;
-                    opacity: 1;
-                    text-align: center;
-                    align-items: center;
-                    position: absolute;
-                    top: -50%;
-                    left: -50%;
-                    z-index: 10;
-                    background-color: #414462;
-                    transform: translateY(50%) translateX(50%);
-                }
-            }
-
-            figcaption {
-                width: inherit;
-                height: inherit;
-                visibility: hidden;
-                opacity: 0;
-                z-index: -1;
-                background-color: transparent;
-                color: #fff;
-                font-size: 2rem;
-                line-height: 1;
-                font-family: $font-regular;
-            }
-
-        }
-    }
-
-    .contacts {
-        .contacts__form {
-            text-align: center;
-            background-color: #eff7ff;
-            border-radius: 1rem;
-            padding: 3rem 6.5rem 2rem 6.5rem;
-            box-shadow: 0 0 32px 2px rgba(11, 16, 32, .45);
-
-            p {
-                font-family: $font-regular;
-                font-size: 1rem;
-                line-height: 1.5rem;
-                color: #5e6377;
-            }
-
-            .form-group {
-                width: 100%;
-                position: relative
-            }
-
-            .feed-form__input {
-                width: 100%;
-                padding: .75rem 1rem;
-                font-size: .875rem;
-                line-height: 1.3125rem;
-                border-radius: .25rem;
-                box-shadow: none;
-                border: 1px solid transparent;
-                margin-bottom: 1.5rem;
-                resize: none;
-                transition: .35s all;
-                color: #233261;
-                font-family: Montserrat, sans-serif;
-
-                &:focus {
-                    outline: 0;
-                    border-color: #acb2c9;
-                    transition: .35s
-                }
-            }
-        }
-    }
-}
-
-.input-item {
-
-    input[type='checkbox'] {
-        display: none;
-    }
-
-    label {
-        color: #000;
-        font-size: 21px;
-        line-height: 25px;
-        font-family: 'PT_Sans-Web-Bold';
-        position: relative;
-        padding-left: 25px;
-
-        &::after,
-        &::before {
-            position: absolute;
-            content: '';
-            left: 0;
-            display: inline-block;
-            vertical-align: top;
-            background-repeat: no-repeat;
-        }
-    }
-
-    input[type='checkbox']+label {
-        &::after {
-            width: 19px;
-            height: 18px;
-            background-image: url(../img/cube@1X.png);
-            top: 6px;
-        }
-    }
-
-    input[type=checkbox]:checked+label {
-        &::before {
-            width: 21px;
-            height: 27px;
-            top: -4px;
-            left: 2px;
-            background-image: url(../img/check@1X.png);
-        }
-    }
 }
 
 
@@ -250,6 +73,7 @@
     margin-bottom: 1rem;
     padding-bottom: 3rem;
     color: #00ab65;
+    margin-bottom: 3rem;
 
     &:after,
     &:before {
@@ -270,6 +94,12 @@
     }
 }
 
+.h3 {
+    font-size: 4.5rem;
+    font-family: PT_Sans-Web-Regular;
+    margin-bottom: 1.25rem;
+}
+
 h4 {
     margin-bottom: 2rem;
     text-align: center;
@@ -277,42 +107,6 @@ h4 {
     font-size: 1.875rem;
     line-height: 2.8125rem;
     font-weight: 600;
-}
-
-.h3 {
-    font-size: 6.5rem;
-    font-family: PT_Sans-Web-Regular;
-    margin-bottom: 1.25rem;
-}
-
-.h2 {
-    font-size: 7.75rem;
-    font-family: PT_Sans-Web-Bold;
-    margin-bottom: 3rem;
-}
-
-button {
-    &.btn {
-        display: inline-block;
-        color: #fff;
-        background-color: #00ab65;
-        border-radius: 3rem;
-        padding: .75rem 1.75rem;
-        font-size: .875rem;
-        line-height: 1.3125rem;
-        font-weight: 600;
-        cursor: pointer;
-        outline: 0;
-        box-shadow: none;
-        text-decoration: none;
-        border-style: unset;
-        transition: .35s all;
-
-        &:hover {
-            background-color: #00cf7a;
-            transition: .35s all;
-        }
-    }
 }
 
 @import './_media.scss';

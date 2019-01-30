@@ -1,0 +1,32 @@
+@import './_vars.scss';
+
+.about {
+    .about-img {
+        text-align: center;
+
+        img {
+            width: 60%;
+        }
+    }
+
+    .about-me {
+        p {
+            line-height: 1.725rem;
+            font-size: 1.9375rem;
+            font-weight: 400;
+            font-family: $font-regular;
+
+            +p {
+                margin-top: 4rem;
+            }
+
+            @import './components/elements/_dot.scss';
+
+        }
+
+        p {
+            font-size: 3.125rem;
+            text-align: justify;
+        }
+    }
+}

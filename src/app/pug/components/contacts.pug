@@ -1,0 +1,18 @@
+section#contacts.hash.contacts
+    h2.h2 Контакты
+    form#callback.contacts__form(name='contact' autocomplete='off')
+        h4 Обратная связь  
+        .form-group
+            input.form__input(type='text' placeholder='Ваше имя' name='name' required)
+        .form-group
+            input.form__input(type='email' placeholder='Электронная почта' name='email' required)
+        .form-group
+            textarea.form__input(name='feedback' placeholder='Сообщение' maxlength='300' required)
+        .form-tools
+            p Отправляя эту форму, Вы соглашаетесь с&nbsp;
+                a.link(href='http://www.solarlab.ru/policy.html' target='_blank') Политикой конфиденциальности&nbsp;
+                | и даете согласие на обработку персональных данных компанией «SolarLab»
+            p
+                +checkbox('iAgreeWith', 'Согласен(а)', 'checkbox', false)
+            p
+                button.btn(type='submit') Отправить 

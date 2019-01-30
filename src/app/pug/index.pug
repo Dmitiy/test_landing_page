@@ -1,75 +1,9 @@
 extends layouts/layout
 
-mixin checkbox(name, title, type, isChecked)
-    .input-item
-        input(type=type, name=name, checked=isChecked, id=name)
-        label(for=name)= title
+include ./mixins/mixin
 
 block content
-    section#aboutMe.hash.about
-        h2.h2 Кандидат
-        .row
-            .w-50
-                .about-img
-                    img.circle(src='./assets/img/me.jpg', alt='I am')
-            .w-50
-                .about-me
-                    p
-                        span.dot
-                        | Шкарлат
-                    p
-                        span.dot
-                        | Дмитрий 
-                    p
-                        span.dot
-                        | 1986 год рождения 
-                    p
-                        span.dot
-                        | г. Севастополь
-    section#myEducation.hash.myEducation
-        h2.h2 Образование
-        h3.h3 Севастопольский Национальный Технический Университет
-        p 2003 - 2008
-        p Факультет:&nbsp;
-            span Автоматики и вычислительной техники
-        p Кафедра:&nbsp;
-            span Кибернетики и вычислительной техники
-        p Специальность:&nbsp;
-            span инженер-системотехник
-    section#hobby.hash.hobby
-        h2.h2 Хобби
-        .row
-            .w-25
-                figure
-                    img(src="./assets/img/tomato.jpg", alt="Помидоры")
-                    figcaption Нравиться выращивать овощи
-            .w-25
-                figure
-                    img(src="./assets/img/fishing.jpg" alt="Рыбалка")
-                    figcaption Обожаю отдых на природе
-            .w-25
-                figure
-                    img(src="./assets/img/Sevastopol.jpg", alt="Памятник затопленным кораблям")
-                    figcaption Люблю свой город-герой "Севастополь"
-            .w-25
-                figure
-                    img(src="./assets/img/handmade.jpg", alt="презент")
-                    figcaption Временами делаю подарки своими руками
-    section#contacts.hash.contacts
-        h2.h2 Контакты
-        form#callback.contacts__form(name='contact' autocomplete='off')
-            h4.feed-form__title Обратная связь  
-            .form-group
-                input.feed-form__input(type='text' placeholder='Ваше имя' name='name' required)
-            .form-group
-                input.feed-form__input(type='email' placeholder='Электронная почта' name='email' required)
-            .form-group
-                textarea.feed-form__input(name='feedback' placeholder='Сообщение' maxlength='300' required)
-            .form-tools
-                p
-                    +checkbox('iAgreeWith', 'Согласен(а)', 'checkbox', false)
-                p
-                    button.btn(type='submit') Отправить 
-            p.feed-form__disc Отправляя эту форму, Вы соглашаетесь с&nbsp;
-                a.link(href='http://www.solarlab.ru/policy.html' target='_blank') Политикой конфиденциальности&nbsp;
-                | и даете согласие на обработку персональных данных компанией «SolarLab»
+    include ./components/about
+    include ./components/myEducation
+    include ./components/hobby
+    include ./components/contacts

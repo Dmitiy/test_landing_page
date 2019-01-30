@@ -1,0 +1,4 @@
+mixin checkbox(name, title, type, isChecked)
+    .input--checkbox
+        input(type=type, name=name, checked=isChecked, id=name)
+        label(for=name)= title
