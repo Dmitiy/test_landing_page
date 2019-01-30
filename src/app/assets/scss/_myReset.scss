@@ -1,0 +1,74 @@
+@import '_vars.scss';
+
+// @import '../../../../node_modules/normalize.css/normalize.css';
+
+ul,
+ol,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    list-style-type: none;
+}
+
+img {
+    border-style: none;
+}
+
+form {
+    fieldset {
+        border: none;
+    }
+}
+
+ul,
+ol,
+p,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a,
+input,
+label,
+select,
+textarea,
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a,
+input,
+select,
+textarea,
+button {
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+input,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

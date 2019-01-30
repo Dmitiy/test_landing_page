@@ -1,0 +1,32 @@
+@import '_vars.scss';
+
+// width from 0 to 100%
+@for $i from 0 through 100 {
+
+    // .progress__line-#{$i},
+    .w-#{$i} {
+        width: 1% * $i;
+    }
+}
+
+.row {
+    width: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.position--relative {
+    position: relative;
+}
+
+.position--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .5s;
+    background-color: #fff;
+}

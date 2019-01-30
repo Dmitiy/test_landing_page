@@ -1,0 +1,11 @@
+@import '_vars.scss';
+
+@each $font-family in PT_Sans-Web-Bold,
+PT_Sans-Web-Regular {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url("#{$path-fonts}/#{$font-family}.ttf");
+        font-weight: normal;
+        font-style: normal;
+    }
+}

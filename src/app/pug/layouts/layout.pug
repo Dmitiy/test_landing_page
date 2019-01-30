@@ -1,0 +1,16 @@
+- var nameTitle = 'test_landing_page';
+
+html(lang="ru")
+    head
+        include ../includes/meta
+        title #{nameTitle}
+    body
+        .page
+            header
+                include ../components/logo
+                h1 Тестовое задание.
+                include ../components/nav
+            main
+                block content
+            footer
+                include ../components/footer
