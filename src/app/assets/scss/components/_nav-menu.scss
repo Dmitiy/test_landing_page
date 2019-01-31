@@ -5,57 +5,47 @@
     align-items: center;
     transform: translateY(0);
 
-    &.position--fixed {
-        display: block !important;
-        // top: 100px;
-        padding: 1rem 0;
-        transform: translateY(100px);
 
-        .nav-menu__link {
-            display: block !important;
-            text-align: center !important;
+
+    .nav-menu__link {
+        display: flex;
+        color: #00ab65;
+        padding: 8px;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1rem;
+        text-transform: uppercase;
+        transition: all .3s;
+    }
+
+    a {
+        position: relative;
+
+        +a {
+            margin-left: 8px;
         }
 
-        .nav-menu__link {
-            display: flex;
-            color: #00ab65;
-            padding: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            line-height: 1rem;
-            text-transform: uppercase;
-            transition: all .3s;
+        &.active {
+            font-family: 'Roboto-Bold';
         }
 
-        a {
-            position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: rgba(16, 81, 222, 0.1);
+            transition: all .3s linear;
+            z-index: -1;
+        }
 
-            +a {
-                margin-left: 8px;
-            }
-
-            &.active {
-                font-family: 'Roboto-Bold';
-            }
+        &:hover {
+            transition: all 0.3s linear;
 
             &::after {
-                content: "";
-                position: absolute;
-                left: 0%;
-                top: 0;
-                bottom: 0;
-                width: 0;
-                background: rgba(16, 81, 222, 0.1);
-                transition: all .3s linear;
-                z-index: -1;
-            }
-
-            &:hover {
-                transition: all 0.3s linear;
-
-                &::after {
-                    width: 100%;
-                }
+                width: 100%;
             }
         }
     }
