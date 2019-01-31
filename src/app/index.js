@@ -16,27 +16,12 @@ import 'bootstrap-4-grid/css/grid.min.css';
 		if (burgerMenu.classList == 'burger-menu') {
 			burgerMenu.classList.add('burger-menu--close');
 			navMenu.classList.add('position--fixed');
-			navMenu.parentElement.classList.remove(
-				'col',
-				'col-xl-5',
-				'col-lg-8',
-				'd-none',
-				'd-sm-none',
-				'd-md-none',
-				'd-lg-block',
-			);
+			navMenu.parentElement.className = '';
 		} else {
 			burgerMenu.classList.remove('burger-menu--close');
 			navMenu.classList.remove('position--fixed');
-			navMenu.parentElement.classList.add(
-				'col',
-				'col-xl-5',
-				'col-lg-8',
-				'd-none',
-				'd-sm-none',
-				'd-md-none',
-				'd-lg-block',
-			);
+			navMenu.parentElement.className =
+				'col col-xl-5 col-lg-8 d-none d-sm-none d-md-none d-lg-block';
 		}
 	});
 
