@@ -2,52 +2,42 @@
 
 @import './_fonts.scss';
 
-@import './_myReset.scss';
-
 @import './_helper.scss';
 
 @import './_default.scss';
 
+@import './_myReset.scss';
 
-.page {
-    width: 100%;
-    margin: 0 auto;
 
-    >header {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+header {
 
-        @import './components/elements/_logo.scss';
+    @import './components/elements/_logo.scss';
 
-        .logo {
-            display: flex;
-        }
+    @import './components/elements/_burger-menu.scss';
 
-        @import './components/_nav-menu.scss';
+    @import './components/_nav-menu.scss';
+}
+
+header,
+header .nav-menu,
+footer,
+    {
+    box-shadow: 0 1px 13px 7px rgba(16, 81, 222, .1);
+}
+
+main {
+    h1 {
+        padding: 3rem 0 0;
     }
 
-    >header,
-    >footer {
-        box-shadow: 0 1px 13px 7px rgba(16, 81, 222, .1);
-    }
+    @import './_layout.scss';
+}
 
-    .row {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
 
-    >footer {
-        padding: 10px 0;
-        @import './components/_nav-menu.scss';
-
-        .footer {
-            @extend .row;
-            padding: 1rem 0;
-            justify-content: space-around;
-        }
-    }
+footer {
+    margin-top: 5rem;
+    padding: 20px 0;
+    @import './components/_nav-menu.scss';
 
     .nav-socials {
         a {
@@ -56,47 +46,23 @@
             }
         }
     }
-
-    @import './_layout.scss';
-
 }
 
 
 .h2 {
-    display: flex;
-    align-items: center;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.875rem;
     line-height: 2.8125rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-    padding-bottom: 3rem;
     color: #00ab65;
     margin-bottom: 3rem;
-
-    &:after,
-    &:before {
-        content: '';
-        position: relative;
-        width: 100%;
-        height: 4px;
-        display: inline-block;
-        box-shadow: 0 1px 13px 7px rgba(16, 81, 222, 0.1);
-    }
-
-    &:after {
-        left: 100px;
-    }
-
-    &:before {
-        right: 100px;
-    }
+    padding-top: 110px;
 }
 
 .h3 {
     font-size: 4.5rem;
-    font-family: PT_Sans-Web-Regular;
+    font-family: $font-regular;
     margin-bottom: 1.25rem;
 }
 

@@ -3,46 +3,59 @@
 .nav-menu {
     display: flex;
     align-items: center;
+    transform: translateY(0);
 
-    .nav-menu__link {
-        display: flex;
-        color: #00ab65;
-        padding: 8px;
-        font-weight: 700;
-        font-size: 1rem;
-        line-height: 1rem;
-        text-transform: uppercase;
-        transition: all .3s;
-    }
+    &.position--fixed {
+        display: block !important;
+        // top: 100px;
+        padding: 1rem 0;
+        transform: translateY(100px);
 
-    a {
-        position: relative;
-
-        +a {
-            margin-left: 8px;
+        .nav-menu__link {
+            display: block !important;
+            text-align: center !important;
         }
 
-        &.active {
-            font-family: 'Roboto-Bold';
+        .nav-menu__link {
+            display: flex;
+            color: #00ab65;
+            padding: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+            transition: all .3s;
         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0%;
-            top: 0;
-            bottom: 0;
-            width: 0;
-            background: rgba(16, 81, 222, 0.1);
-            transition: all .3s linear;
-            z-index: -1;
-        }
+        a {
+            position: relative;
 
-        &:hover {
-            transition: all 0.3s linear;
+            +a {
+                margin-left: 8px;
+            }
+
+            &.active {
+                font-family: 'Roboto-Bold';
+            }
 
             &::after {
-                width: 100%;
+                content: "";
+                position: absolute;
+                left: 0%;
+                top: 0;
+                bottom: 0;
+                width: 0;
+                background: rgba(16, 81, 222, 0.1);
+                transition: all .3s linear;
+                z-index: -1;
+            }
+
+            &:hover {
+                transition: all 0.3s linear;
+
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }

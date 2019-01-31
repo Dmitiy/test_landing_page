@@ -1,28 +1,59 @@
+import 'bootstrap-4-grid/css/grid.min.css';
+
 (() => {
-    const pageContainer = document.querySelector('.page');
-    const header = document.querySelector('header');
-    const main = document.querySelector('main');
+	const pageContainer = document.querySelector('.page');
+	const header = document.querySelector('header');
+	const main = document.querySelector('main');
 
-    const topOfHeader = header.offsetTop;
-    const helperDiv = header.offsetHeight + 'px';
-    const newDiv = document.createElement("div");
+	const topOfHeader = header.offsetTop;
+	const helperDiv = header.offsetHeight + 'px';
+	const newDiv = document.createElement('div');
 
-    newDiv.style.height = helperDiv;
+	const burgerMenu = document.querySelector('.burger-menu');
+	const navMenu = document.querySelector('.nav-menu');
 
-    // sticky-header
-    const stickyHeader = () => {
+	burgerMenu.addEventListener('click', () => {
+		if (burgerMenu.classList == 'burger-menu') {
+			burgerMenu.classList.add('burger-menu--close');
+			navMenu.classList.add('position--fixed');
+			navMenu.parentElement.classList.remove(
+				'col',
+				'col-xl-5',
+				'col-lg-8',
+				'd-none',
+				'd-sm-none',
+				'd-md-none',
+				'd-lg-block',
+			);
+		} else {
+			burgerMenu.classList.remove('burger-menu--close');
+			navMenu.classList.remove('position--fixed');
+			navMenu.parentElement.classList.add(
+				'col',
+				'col-xl-5',
+				'col-lg-8',
+				'd-none',
+				'd-sm-none',
+				'd-md-none',
+				'd-lg-block',
+			);
+		}
+	});
 
-        if (window.scrollY > topOfHeader) {
-            pageContainer.classList.add('position--relative');
-            pageContainer.insertBefore(newDiv, main);
-            header.classList.add('position--fixed');
-        } else {
-            pageContainer.classList.remove('position--relative');
-            pageContainer.removeChild(newDiv);
-            header.classList.remove('position--fixed');
-        }
-    }
+	newDiv.style.height = helperDiv;
 
-    window.addEventListener('scroll', stickyHeader);
+	// sticky-header
+	const stickyHeader = () => {
+		if (window.scrollY > topOfHeader) {
+			pageContainer.classList.add('position--relative');
+			pageContainer.insertBefore(newDiv, main);
+			header.classList.add('position--fixed');
+		} else {
+			pageContainer.classList.remove('position--relative');
+			pageContainer.removeChild(newDiv);
+			header.classList.remove('position--fixed');
+		}
+	};
 
-})()
+	window.addEventListener('scroll', stickyHeader);
+})();

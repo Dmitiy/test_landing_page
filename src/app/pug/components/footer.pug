@@ -1,8 +1,12 @@
-.footer
-    .nav-socials
-        a(href="https://vk.com/id5279370" target='_blank')
-            i.fab.fa-vk.fa-2x(style='color: #4575aa;')
-        a(href="https://www.instagram.com/dmitrysev/?hl=ru" target='_blank')
-            i.fab.fa-instagram.fa-2x(style='color: rgb(211,33,163);')
-    include ./nav
-    span &copy; 2019
+.container-fluid
+    .row.align-items-center.justify-content-around
+        .col
+            span &copy; 2019
+        .col.d-none.d-lg-none.d-xl-block
+            include ./nav
+        .col
+            .nav-socials
+                a(href="https://vk.com/id5279370" target='_blank')
+                    i.fab.fa-vk.fa-2x(style='color: #4575aa;')
+                a(href="https://www.instagram.com/dmitrysev/?hl=ru" target='_blank')
+                    i.fab.fa-instagram.fa-2x(style='color: rgb(211,33,163);')

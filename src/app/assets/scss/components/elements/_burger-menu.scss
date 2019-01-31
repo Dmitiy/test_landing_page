@@ -1,0 +1,67 @@
+@import './_vars.scss';
+
+.burger-menu {
+    position: relative;
+    width: 37px;
+    height: 28px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        border: 2px solid #2c386d;
+        background-color: #f08080;
+        border-radius: 10px;
+        transform-origin: left center;
+        transition: .35s ease-in-out;
+
+        &:first-child {}
+
+        &:nth-child(2) {
+            top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+            top: calc(100% - 2px);
+        }
+    }
+
+    &.burger-menu--close {
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            border: 2px solid #2c386d;
+            background-color: #f08080;
+            border-radius: 10px;
+            transform-origin: left center;
+            transition: .35s ease-in-out;
+
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                top: calc(50% - 1px);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: calc(100% - 2px);
+            }
+        }
+    }
+}

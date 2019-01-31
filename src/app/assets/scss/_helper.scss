@@ -1,14 +1,5 @@
 @import '_vars.scss';
 
-// width from 0 to 100%
-@for $i from 0 through 100 {
-
-    // .progress__line-#{$i},
-    .w-#{$i} {
-        width: 1% * $i;
-    }
-}
-
 .link {
     color: #1e8c3d !important;
     transition: .4s all;
