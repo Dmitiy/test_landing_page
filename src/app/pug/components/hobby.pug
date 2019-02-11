@@ -2,15 +2,7 @@ section#hobby.hobby
     h2.h2 Хобби
     .container
         .row
-            figure
-                img(src="./assets/img/tomato.jpg", alt="Помидоры")
-                figcaption Нравиться выращивать овощи
-            figure
-                img(src="./assets/img/fishing.jpg" alt="Рыбалка")
-                figcaption Обожаю отдых на природе
-            figure
-                img(src="./assets/img/Sevastopol.jpg", alt="Памятник затопленным кораблям")
-                figcaption Люблю свой город-герой "Севастополь"
-            figure
-                img(src="./assets/img/handmade.jpg", alt="презент")
-                figcaption Временами делаю подарки своими руками
+            +figure-hobby('./assets/img/tomato.jpg','Помидоры', 'Нравиться выращивать овощи' )
+            +figure-hobby('./assets/img/fishing.jpg','Рыбалка', 'Обожаю отдых на природе' )
+            +figure-hobby('./assets/img/Sevastopol.jpg','Памятник затопленным кораблям', 'Люблю свой город-герой "Севастополь"' )
+            +figure-hobby('./assets/img/handmade.jpg','презент', 'Временами делаю подарки своими руками' )

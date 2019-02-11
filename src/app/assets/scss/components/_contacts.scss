@@ -41,9 +41,10 @@
             }
         }
 
+        .form-tools {
+            @import './components/elements/_input-checkbox.scss';
 
-        @import './components/elements/_input-checkbox.scss';
-
-        @import './components/elements/_button.scss';
+            @import './components/elements/_button.scss';
+        }
     }
 }

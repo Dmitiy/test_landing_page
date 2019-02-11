@@ -1,3 +1,10 @@
+//- block hobby
+mixin figure-hobby(src, alt, figcaption)
+    figure
+        img(src= src, alt= alt)
+        figcaption= figcaption
+
+//- block contacts
 mixin checkbox(name, title, type, isChecked)
     .input--checkbox
         input(type=type, name=name, checked=isChecked, id=name)
